@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'accounts-openstreetmap',
+  name: 'mstn:accounts-openstreetmap',
   summary: "Login service for OpenStreetMap accounts",
   version: "0.1.0"
 });
