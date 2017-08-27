@@ -5,15 +5,14 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.use('underscore', ['server']);
+  api.versionsFrom('1.5.1');
   api.use('accounts-base', ['client', 'server']);
   
   api.imply('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('mstn:openstreetmap-oauth');
+  api.use('mstn:openstreetmap-oauth@0.0.1');
   api.imply('mstn:openstreetmap-oauth');
   
-  api.use('http', ['client', 'server']);
   api.addFiles("accounts-osm.js");
   
 });
