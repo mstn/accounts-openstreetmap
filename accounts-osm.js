@@ -1,7 +1,7 @@
 Accounts.oauth.registerService('openstreetmap');
 
 if (Meteor.isClient) {
-  const loginWithOSM = function(options, callback) {
+  const loginWithOpenstreetmap = function(options, callback) {
     if (! callback && typeof options === "function") {
       callback = options;
       options = null;
@@ -9,8 +9,8 @@ if (Meteor.isClient) {
     const credentialRequestCompleteCallback = Accounts.oauth.credentialRequestCompleteHandler(callback);
     OpenStreetMap.requestCredential(options, credentialRequestCompleteCallback);
   }
-  Accounts.registerClientLoginFunction('openstreetmap', loginWithOSM);
-  Meteor.loginWithOSM = function () {
+  Accounts.registerClientLoginFunction('openstreetmap', loginWithOpenstreetmap);
+  Meteor.loginWithOpenstreetmap = function () {
     return Accounts.applyLoginFunction('openstreetmap', arguments);
   };
 } else {
