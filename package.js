@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   
   api.imply('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('mstn:openstreetmap-oauth@0.0.1');
+  api.use('mstn:openstreetmap-oauth@0.1.0');
   api.imply('mstn:openstreetmap-oauth');
   
   api.addFiles("accounts-osm.js");
