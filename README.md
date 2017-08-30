@@ -30,7 +30,7 @@ And login!
 
 ```javascript
 // on the client
-Meteor.loginWithOSM();
+Meteor.loginWithOpenstreetmap();
 ```
 
 The access token for OSM API is available only on the server side in the user object.
